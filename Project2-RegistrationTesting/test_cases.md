@@ -308,4 +308,47 @@ Fail
 
 ---
 
-## TC_REGISTRATION_008 - 
+## TC_REGISTRATION_008 - Registration fails with values out of the accepted range for Age field
+
+### Feature
+Employee Registration Managment
+
+### Priority
+Medium
+
+### Severity
+Medium
+
+### Preconditions
+- User is logged into the system with HR admin permissions
+- User has access to Employee Registration module
+- User is on the Employee Registration form page
+
+### Test data
+1. Age: Any value between 5-17 (e.g., "15")
+2. Remaining fields: valid data
+
+### Steps to Reproduce
+1. Log in to the system with HR admin credentials
+2. Navigate to Employee Registration page
+3. Enter any value between 5-17 (e.g., "15") in Age field
+4. Fill the remaining fields with valid data
+5. Click on "submit"
+
+### Expected Result
+- System should not allow any value outside of the accepted range in Age field
+- Validation error message should be displayed
+- Employee should not be registered
+
+### Actual Result
+- System allows user to fill Age field with values outside the accepted range, specifically any value between 5 and 17
+- No validation error message is displayed
+- Employee is registered
+
+### Status
+Fail
+
+---
+
+## TC_REGISTRATION_009 - Registration is successfull with boundarys values for Age field
+
