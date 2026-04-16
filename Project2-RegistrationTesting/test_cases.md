@@ -1,1 +1,2 @@
-# Test Cases - Project 2
+## Project: GeekRetail Registration Testing
+
