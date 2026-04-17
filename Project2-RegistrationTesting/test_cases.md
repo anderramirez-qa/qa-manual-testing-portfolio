@@ -462,3 +462,84 @@ Pass
 
 ---
 
+## TC_REGISTRATION_012 - Registration fails with invalid address
+
+### Feature
+Employee Registration Form
+
+### Priority
+Medium
+
+### Severity
+Medium
+
+### Preconditions
+- User is logged into the system with HR admin permissions
+- User has access to Employee Registration module
+- User is on the Employee Registration form page
+
+### Test Data
+1. Address: abc
+2. Remaining fields: valid data
+
+### Steps to Reproduce
+1. Log in to the system with HR admin credentials
+2. Navigate to Employee Registration page
+3. Enter "abc" in the Adress field
+4. Fill the remaining fields with valid data
+5. Click on "submit"
+
+### Expected Result
+- Employee should not be registered
+- Validation error message should be displayed indicating valid data for the adress field
+
+### Actual Result
+- System accepts any adress length (even just a space)
+- Success message is displayed
+- Employee is registered
+
+### Status
+FAIL
+
+---
+
+## TC_REGISTRATION_013 - Registration fails with invalid URL
+
+### Feature
+Employee Registration Form
+
+### Priority
+Low
+
+### Severity
+Low
+
+### Preconditions
+- User is logged into the system with HR admin permissions
+- User has access to Employee Registration module
+- User is on the Employee Registration form page
+
+### Test Data
+1. URL: githubcom/anderramirez-qa
+2. Remaining fields: valid data
+
+### Steps to Reproduce
+1. Log in to the system with HR admin credentials
+2. Navigate to Employee Registration page
+3. Enter "githubcom/anderramirez-qa" (or any invalid URL) in the URL field
+4. Fill the rest of the fields with valid data
+5. Click on "submit"
+
+### Expected Result
+- Employee should not be registered
+- Validation error message should be displayed
+
+### Actual Result
+- System rejects any invalid URL
+- Error message is displayed in the URL field
+- Employee is not registered
+
+### Status
+Pass
+
+---
