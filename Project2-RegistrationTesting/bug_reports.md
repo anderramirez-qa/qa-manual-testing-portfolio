@@ -168,4 +168,97 @@ Open
 
 ---
 
-## 🐞 BG006 - 
+## 🐞 BG006 - Registration is successful with mandatory data missing
+
+### Environment
+Windows 10, Google Chrome (Version 147.0.7727.56)
+
+### Priority
+High
+
+### Severity
+Critical
+
+### Description
+Employee can be registered with empty mandatory fields, such as Gender or Adress
+
+### Steps to Reproduce
+1. Open Employee Registration form
+2. Leave Gender and Adress fields empty
+3. Fill the remaining fields with valid data
+4. Click on "submit"
+
+### Expected Result
+- Employee should not be registered
+- Validation error message should be displayed for both missing fields
+
+### Actual Result
+- The system allows to leave Gender and Adress field empty
+- Employee registration is completed succesfully
+
+### Status
+Open
+
+---
+
+## 🐞 BG007 - System allows addresses and phone numbers shorter than the established minimum
+
+### Environment
+Windows 10, Google Chrome (Version 147.0.7727.56)
+
+### Priority
+High
+
+### Severity
+High
+
+### Description
+The Address and Phone fields can be filled with addresses shorter than the established minimum
+
+### Steps to Reproduce
+1. Open Employee Registration form
+2. Enter short address (e.g., 3 characters)
+3. Enter short phone number (e.g., 5 characters)
+4. Fill the remaining fields with valid data
+5. Click on "submit"
+
+### Expected Redult
+- The system should not accept addresses or phone numbers shorter than 10 characters (established minimum)
+- Validation error mesage should be displayed in both fields indicating requirements
+
+### Actual Result
+- Employees can be registered with addresses and phone numbers with fewer characters than the established minimum
+
+### Status
+Open
+
+---
+
+## 🐞 BG008 - Employee Registration table exceeds the form limits
+
+### Environment
+Windows 10, Google Chrome (Version 147.0.7727.56)
+
+### Priority
+Medium
+
+### Severity
+Medium
+
+### Description
+The Employee Registration table at the bottom of the form exceeds its limits
+
+### Steps to Reproduce
+1. Open Employee Registration form
+2. Fill every field with valid data
+3. Click on "submit"
+4. View the registration table displayed under the form
+
+### Expected Result
+- The registration table should adjust to the form's size
+
+### Actual Result
+The registration table expands outside the form's boundaries
+
+### Status
+Open
